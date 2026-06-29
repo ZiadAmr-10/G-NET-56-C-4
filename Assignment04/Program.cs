@@ -57,25 +57,26 @@
             //while (!isValid);
             #endregion
             #region Question03
-            int[,] StudentGrades = new int[3, 4];
-            for (int student = 0; student < StudentGrades.GetLength(0); student++)
-            {
-                Console.WriteLine($"Student {student + 1}");
+            //int[,] StudentGrades = new int[3, 4];
+            //for (int student = 0; student < StudentGrades.GetLength(0); student++)
+            //{
+            //    Console.WriteLine($"Student {student + 1}");
 
-                for (int subject = 0; subject < StudentGrades.GetLength(1); subject++)
-                {
-                    Console.Write($"Enter Subject {subject + 1} Grade: ");
-                    StudentGrades[student, subject] = int.Parse(Console.ReadLine());
-                }
-            }
-            StudentGrades Student=new StudentGrades(StudentGrades);
-            for (int i = 0; i < StudentGrades.GetLength(0); i++)
-            {
-                Console.WriteLine($"Student {i + 1} Average = {Student.GetStudentAverage(i)}");
-            }
-            Console.WriteLine($"Class Average = {Student.GetclassAverage()}");
+            //    for (int subject = 0; subject < StudentGrades.GetLength(1); subject++)
+            //    {
+            //        Console.Write($"Enter Subject {subject + 1} Grade: ");
+            //        StudentGrades[student, subject] = int.Parse(Console.ReadLine());
+            //    }
+            //}
+            //StudentGrades Student=new StudentGrades(StudentGrades);
+            //for (int i = 0; i < StudentGrades.GetLength(0); i++)
+            //{
+            //    Console.WriteLine($"Student {i + 1} Average = {Student.GetStudentAverage(i)}");
+            //}
+            //Console.WriteLine($"Class Average = {Student.GetclassAverage()}");
 
             #endregion
+         
         }
     }
 }
