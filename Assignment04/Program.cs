@@ -140,7 +140,22 @@ namespace Assignment04
             //Console.WriteLine($"Area = {area}");
             //Console.WriteLine($"Circumference = {circumference}");
             #endregion
+            #region Question06
+            int[] Students=new int[5];
+            int min,max;
+            for (int i = 0; i < Students.Length; i++) {
+                Console.WriteLine($"Enter Score For Student {i+1} : ");
+                Students[i]=int.Parse(Console.ReadLine());
+            }
+            for (int i = 0;i < Students.Length; i++)
+            {
+                Console.WriteLine($"Student {i + 1} : {Students[i]} ->Grade : {GradesManager.GetGrades(Students[i])}");
+            }
+            Console.WriteLine($"Average Score : {GradesManager.GetAverage(Students)}");
+            GradesManager.GetMinMax(Students,out  min,out max);
+            Console.WriteLine($"Min Score : {min}\nMax Score : {max}");
 
+            #endregion
 
 
         }
