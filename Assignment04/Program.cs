@@ -121,25 +121,27 @@ namespace Assignment04
             //}
             #endregion
             #region Question05
-            double radius;
-            double area;
-            double circumference;
-            bool isValid = false;
-            do
-            {
-                Console.WriteLine("Enter Circle Radius : ");
-                bool isParsed = double.TryParse(Console.ReadLine(), out radius);
-                if (!isParsed || radius <= 0)
-                {
-                    Console.WriteLine("Invalid Radius! Try Again.");
-                }
-                else
-                    isValid = true;
-            } while (!isValid);
-            CircleCalculator.CalculateCircle(radius,out area,out circumference);
-            Console.WriteLine($"Area = {area}");
-            Console.WriteLine($"Circumference = {circumference}");
+            //double radius;
+            //double area;
+            //double circumference;
+            //bool isValid = false;
+            //do
+            //{
+            //    Console.WriteLine("Enter Circle Radius : ");
+            //    bool isParsed = double.TryParse(Console.ReadLine(), out radius);
+            //    if (!isParsed || radius <= 0)
+            //    {
+            //        Console.WriteLine("Invalid Radius! Try Again.");
+            //    }
+            //    else
+            //        isValid = true;
+            //} while (!isValid);
+            //CircleCalculator.CalculateCircle(radius,out area,out circumference);
+            //Console.WriteLine($"Area = {area}");
+            //Console.WriteLine($"Circumference = {circumference}");
             #endregion
+
+
 
         }
     }
