@@ -29,32 +29,52 @@
             // } while (!Flag);
             #endregion
             #region Question02
-            int[] arr;
-            bool isValid = false;
-            do {
-                Console.WriteLine("Enter a SizeOfArray : ");
-                bool isParse = int.TryParse(Console.ReadLine(), out int size);
-                if (isParse&&size>0)
+            //int[] arr;
+            //bool isValid = false;
+            //do {
+            //    Console.WriteLine("Enter a SizeOfArray : ");
+            //    bool isParse = int.TryParse(Console.ReadLine(), out int size);
+            //    if (isParse&&size>0)
+            //    {
+            //        isValid = true;
+            //        arr = new int[size];
+            //        for (int i = 0; i < size; i++)
+            //        {
+            //            Console.WriteLine($"Enter Element {i + 1} : ");
+            //            arr[i] = int.Parse(Console.ReadLine());
+            //        }
+            //        ArrayStatistics array = new ArrayStatistics(arr);
+            //        Console.WriteLine($"Sum : {array.GetSum()}");
+            //        Console.WriteLine($"Average :{array.GetAverage()}");
+            //        Console.WriteLine($"Max Number : {array.GetMax()}");
+            //        Console.WriteLine($"Min Number : {array.GetMin()}");
+            //        Console.WriteLine("Reverse Array : ");
+            //        array.PrintReverse();
+            //    }
+            //    else
+            //        Console.WriteLine("/InValid Number Try Again !");
+            //}
+            //while (!isValid);
+            #endregion
+            #region Question03
+            int[,] StudentGrades = new int[3, 4];
+            for (int student = 0; student < StudentGrades.GetLength(0); student++)
+            {
+                Console.WriteLine($"Student {student + 1}");
+
+                for (int subject = 0; subject < StudentGrades.GetLength(1); subject++)
                 {
-                    isValid = true;
-                    arr = new int[size];
-                    for (int i = 0; i < size; i++)
-                    {
-                        Console.WriteLine($"Enter Element {i + 1} : ");
-                        arr[i] = int.Parse(Console.ReadLine());
-                    }
-                    ArrayStatistics array = new ArrayStatistics(arr);
-                    Console.WriteLine($"Sum : {array.GetSum()}");
-                    Console.WriteLine($"Average :{array.GetAverage()}");
-                    Console.WriteLine($"Max Number : {array.GetMax()}");
-                    Console.WriteLine($"Min Number : {array.GetMin()}");
-                    Console.WriteLine("Reverse Array : ");
-                    array.PrintReverse();
+                    Console.Write($"Enter Subject {subject + 1} Grade: ");
+                    StudentGrades[student, subject] = int.Parse(Console.ReadLine());
                 }
-                else
-                    Console.WriteLine("/InValid Number Try Again !");
             }
-            while (!isValid);
+            StudentGrades Student=new StudentGrades(StudentGrades);
+            for (int i = 0; i < StudentGrades.GetLength(0); i++)
+            {
+                Console.WriteLine($"Student {i + 1} Average = {Student.GetStudentAverage(i)}");
+            }
+            Console.WriteLine($"Class Average = {Student.GetclassAverage()}");
+
             #endregion
         }
     }
